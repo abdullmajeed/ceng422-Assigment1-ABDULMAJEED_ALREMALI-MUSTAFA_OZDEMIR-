@@ -3,3 +3,6 @@ pandas
 gensim
 ftfy
 openpyxl
+regex
+scikit-learn
+unicodedata2
