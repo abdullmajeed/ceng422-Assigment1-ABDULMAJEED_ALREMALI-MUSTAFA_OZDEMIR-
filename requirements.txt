@@ -1,0 +1,5 @@
+# Requirements for Azerbaijani Sentiment Analysis Pipeline (CENG442 Assignment 1)
+pandas
+gensim
+ftfy
+openpyxl
