@@ -63,7 +63,7 @@ We implemented all 5 mini challenges successfully:
   → **Reported:** `2187 tokens changed`
 ---
 
-## *4️⃣ Domain-Aware
+## 4️⃣ Domain-Aware
 
 We implemented automatic **domain detection** and **domain-specific normalization**  
 to make the corpus context-aware and help embeddings learn domain-sensitive semantics.
@@ -163,6 +163,30 @@ Both models were trained using **gensim** and saved as:
 - Both embeddings provided **meaningful nearest neighbors**, validating the preprocessing pipeline and domain-tagged corpus.
 
 ---
+## 6️⃣ Lemmatization (Optional)
+
+We initially attempted to use **existing Azerbaijani lemmatization libraries**, such as *MorAz* (a morphological analyzer) and other open-source tools, to automatically reduce inflected words to their lemmas.  
+However, these libraries were either **not publicly available**, **not installable via pip**, or **incompatible** with our Python environment. As a result, we implemented a **simplified rule-based lemmatization** instead.
+
+Our approach relies on:
+1. A **custom hand-built mapping (`LEMMA_MAP`)** that covers common word variants  
+   *(e.g., `yaxşıdır → yaxşı`, `gözəldir → gözəl`, `ucuzdur → ucuz`, `bahalıdır → bahalı`)*  
+2. A **copula-removal rule** (`-dır`, `-dir`, `-dur`, `-dü`, etc.) safely applied when the remaining stem length ≥ 3.
+
+This hybrid approach provided a lightweight yet effective approximation of true lemmatization, helping unify multiple surface forms of the same word and improving model consistency.  
+Across all datasets, the rule-based lemmatizer **normalized approximately 84,241 tokens**, which noticeably increased vocabulary coherence before embedding training.
+
+###  Effect on Embeddings after Lemmatization
+
+After applying the rule-based lemmatizer, all datasets showed a **notable increase in lexical coverage**, especially for **Word2Vec**, which reached above 0.93 across all domains.  
+This indicates that the normalization successfully unified multiple inflected forms (e.g., *yaxşıdır → yaxşı*, *gözəldir → gözəl*, *ucuzdur → ucuz*).
+
+Although synonym and antonym similarity scores remained relatively close, qualitative inspection of nearest neighbors demonstrated **cleaner and more semantically consistent clusters** around sentiment-bearing words.  
+For instance, the neighbors of *yaxşı* and *pis* were more coherent (grouping similar or contextually related words rather than noisy forms).
+
+Overall, even with a simple rule-based approach, **vocabulary cohesion and embedding interpretability improved**, validating the practical value of lightweight Azerbaijani lemmatization.
+
+
 ---
 
 ## 7️⃣ Reproducibility
@@ -257,6 +281,7 @@ This assignment successfully demonstrated the complete **Azerbaijani sentiment a
 - Mustafa ÖzdemirR (21050111016)
 
 ---
+
 
 
 
