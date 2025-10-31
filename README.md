@@ -167,6 +167,16 @@ Both models were trained using **gensim** and saved as:
 
 ## 7️⃣ Reproducibility
 
+## 📂 Embeddings Folder
+
+The trained models are stored in Google Drive for easy access:
+
+🔗 **[Download from Google Drive](https://drive.google.com/drive/folders/1K6hKwy7nbCecQHkzKE0PpRW_Kc2hsNr7?usp=sharing)**  
+Contains:
+- `word2vec.model`
+- `fasttext.model`
+- Supporting files (vocab, vectors, etc.)
+
 The project is **fully reproducible** and organized into **three modular scripts**:
 
 | **Stage** | **Script** | **Description** |
@@ -247,5 +257,6 @@ This assignment successfully demonstrated the complete **Azerbaijani sentiment a
 - Mustafa OZDEMIR ()
 
 ---
+
 
 
