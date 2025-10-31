@@ -271,11 +271,16 @@ This assignment successfully demonstrated the complete **Azerbaijani sentiment a
 
 - The preprocessing pipeline effectively normalized noisy Azerbaijani text, handled negations, emojis, hashtags, and domain-specific patterns.  
 - The domain-aware corpus (`corpus_all.txt`) enabled richer contextual learning across *news*, *social*, and *review* text types.  
-- Both embeddings produced meaningful semantic structures; however, **FastText** achieved higher coverage and better synonym similarity due to its subword modeling.  
-- The evaluation confirmed that **FastText** handles **morphological variations and rare words** more effectively, while **Word2Vec** remains competitive for frequent vocabulary.  
+- Both embeddings produced meaningful semantic structures; however, **FastText** consistently performed better overall.  
+- **FastText** achieved higher synonym and antonym similarity, better handled **morphological variations** and **rare words**, thanks to its subword-based architecture.  
+- **Word2Vec** remained competitive for frequent and clean vocabulary but was less robust to noisy or misspelled forms.  
+- A light **lemmatization step** was tested to unify morphological variants (e.g., *gedirəm → getmək*), slightly improving consistency but with limited impact compared to FastText’s subword modeling.  
 - All experiments were reproducible and CPU-efficient, meeting the project’s reproducibility and interpretability criteria.
 
+**Conclusion:** Overall, **FastText** proved to be the better model for Azerbaijani sentiment analysis due to its ability to capture subword information and handle the language’s rich morphology more effectively.
+
 **Future work:** integrating a more advanced Azerbaijani lemmatizer, expanding domain coverage, and exploring transformer-based embeddings such as **BERT** for deeper contextual understanding.
+
 
 ---
 
@@ -285,6 +290,7 @@ This assignment successfully demonstrated the complete **Azerbaijani sentiment a
 - Mustafa ÖzdemirR (21050111016)
 
 ---
+
 
 
 
