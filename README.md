@@ -186,6 +186,10 @@ For instance, the neighbors of *yaxşı* and *pis* were more coherent (grouping 
 
 Overall, even with a simple rule-based approach, **vocabulary cohesion and embedding interpretability improved**, validating the practical value of lightweight Azerbaijani lemmatization.
 
+> **Note:**  
+> All files related to the **Lemmatization experiment**, including the modified preprocessing code and the resulting two-column Excel outputs,  
+> are stored separately under the folder **`/Lemmatization/`** for clarity and reproducibility.
+
 
 ---
 
@@ -281,6 +285,7 @@ This assignment successfully demonstrated the complete **Azerbaijani sentiment a
 - Mustafa ÖzdemirR (21050111016)
 
 ---
+
 
 
 
