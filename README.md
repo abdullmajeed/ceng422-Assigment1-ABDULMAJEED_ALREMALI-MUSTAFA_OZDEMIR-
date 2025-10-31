@@ -254,9 +254,10 @@ This assignment successfully demonstrated the complete **Azerbaijani sentiment a
 ### Group Members
 
 - Abdulmajeed Alremali (22050941025)
-- Mustafa OZDEMIR ()
+- Mustafa ÖzdemirR (21050111016)
 
 ---
+
 
 
 
